@@ -1,0 +1,32 @@
+[dir="ltr"] {
+	.table-box {
+		padding-left: 10% !important;
+		margin-bottom: 100px !important;
+	}
+}
+
+[dir="rtl"] {
+	.table-box {
+		padding-right:  10% !important;
+		margin-bottom: 100px !important;
+	}
+}
+
+.mdc-data-table__table {
+	min-width: 80% !important;
+	max-width: 80% !important;
+}
+
+.image {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.example-button-container {
+	display: flex;
+	justify-content: center;
+	max-height: 20px;
+  }

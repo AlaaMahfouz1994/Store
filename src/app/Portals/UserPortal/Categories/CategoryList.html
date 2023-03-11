@@ -1,0 +1,44 @@
+<mat-toolbar>
+	<a [ngClass]="{'active': SelectedCategory == row}" href="javascript:;" class="category"
+		*ngFor="let row of Categories" (click)="GetProductsInCategory(row)">{{row}}</a>
+</mat-toolbar>
+
+<mat-form-field>
+	<mat-label>Filter</mat-label>
+	<input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+</mat-form-field>
+
+<mat-grid-list cols="3">
+	<mat-grid-tile *ngFor="let row of FilteredRows">
+
+		<mat-card class="product-card">
+			<mat-card-header>
+				<mat-card-title>{{row.title}}</mat-card-title>
+				<mat-card-subtitle>{{row.category}}</mat-card-subtitle>
+
+			</mat-card-header>
+			<img mat-card-image class="image" [src]="row.image || 'assets/img/product.jpg'">
+			<mat-card-content>
+				<mat-icon class="star-icon" *ngFor="let i of [1,2,3,4,5]">
+					{{ (row.rating.rate >= i) ? 'star': 'star_border' }}
+				</mat-icon>
+			<small class="rating-count" title="Rating Count">
+				{{row.rating.count}}
+			</small>	
+				<b class="price" title="Price">${{row.price}} </b>
+				<p>
+					{{ (row.description.length>200)? (row.description | slice:0:200)+'...':(row.description ) }}
+					<!-- {{row.description}} -->
+				</p>
+
+			</mat-card-content>
+
+		</mat-card>
+
+
+
+
+
+	</mat-grid-tile>
+
+</mat-grid-list>

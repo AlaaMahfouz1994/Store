@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-title>{{'Login' | translate}}</mat-card-title>
+    <mat-card-content>
+        <form>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="{{'Username' | translate}}" name="username" [(ngModel)]="username">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="{{'Password' | translate}}" name="password" [(ngModel)]="password">
+                </mat-form-field>
+            </p>
+
+            <div class="button">
+                <button type="submit" mat-button (click)="Login()">{{'Login' | translate}}</button>
+            </div>
+
+
+            <div class="text-center">
+                <a href="javascript:;" (click)="ChangeLanguage('ar')">عربى</a> |
+                <a href="javascript:;" (click)="ChangeLanguage('en')">English</a>
+            </div>
+
+        </form>
+    </mat-card-content>
+</mat-card>
+
+
+
+
+
+<!-- 
+<form class="example-form">
+    <mat-card>
+        <mat-form-field appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="Enter your name" name="usename" [(ngModel)]="username">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter your password" value="" name="password" type="password"
+                [(ngModel)]="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="Login()">Login</button>
+        <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+    </mat-card>
+</form> -->

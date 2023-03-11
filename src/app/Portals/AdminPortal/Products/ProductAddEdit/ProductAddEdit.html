@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>{{'Add - Edit' | translate}}</h2>
+<mat-dialog-content class="mat-typography">
+
+    <mat-grid-list cols="12">
+        <mat-grid-tile colspan="2"> <mat-label> Title </mat-label>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10"> <mat-form-field>
+                <input type="text" matInput placeholder="{{'Title' | translate}}" name="title" [(ngModel)]="Data.title">
+            </mat-form-field></mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12">
+        <mat-grid-tile colspan="2"> <mat-label> Category </mat-label>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10"> <mat-form-field>
+                <input type="category" matInput placeholder="{{'Category' | translate}}" name="password"
+                    [(ngModel)]="Data.category">
+            </mat-form-field></mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12">
+        <mat-grid-tile colspan="2"> <mat-label> Price </mat-label>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10"> <mat-form-field>
+                <input type="price" matInput placeholder="{{'Price' | translate}}" name="Price"
+                    [(ngModel)]="Data.price">
+            </mat-form-field></mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12">
+        <mat-grid-tile colspan="2"> <mat-label> Description </mat-label>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="10"> <mat-form-field>
+                <input type="description" matInput placeholder="{{'Description' | translate}}" name="description"
+                    [(ngModel)]="Data.description">
+            </mat-form-field></mat-grid-tile>
+    </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button cdkFocusInitial (click)="Save()">Save</button>
+</mat-dialog-actions>

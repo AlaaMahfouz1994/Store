@@ -1,0 +1,53 @@
+.active {
+    color: blue !important;
+}
+
+mat-form-field {
+    padding: 20px !important;
+    width: 100%;
+    color: black;
+}
+
+.category {
+    flex: 1 1 auto;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.product-card {
+    max-width: 400px !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+    border: 1px solid black !important;
+    border-radius: 3px !important;
+}
+
+mat-grid-list {
+    margin-top: 100px !important;
+}
+
+.image {
+    width: auto;
+    height: 150px;
+    max-width: 400px;
+    max-height: 150px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+    float: right !important;
+}
+
+.star-icon {
+    color: orange !important;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.rating-count {
+    vertical-align: super;
+}
